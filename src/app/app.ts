@@ -9,6 +9,7 @@ import {AddressModel} from './addressModel';
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, AddressRenderer],
     template: `
         <address-renderer [data]="addressModel"></address-renderer>
+        {{addressModel.name}}
     `
 })
 class App {
