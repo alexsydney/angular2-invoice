@@ -1,0 +1,68 @@
+$enable-flex: true;
+
+// Container is always 50rem in this project
+$container-max-widths: (
+        sm: 50rem, // 800
+        md: 50rem, // 800
+        lg: 50rem, // 800
+        xl: 50rem // 800
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  padding-top: 1rem;
+}
+
+// todo can we pre-configure the print dialog from the app?
+@page {
+  size: A4;
+  margin: 0.5in;
+}
+
+textarea, input {
+  outline: none;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.invoice-logo {
+  padding: 0.375rem 1.35rem;
+}
+
+.invoice-items {
+  .row:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .column-total {
+    padding: 0.375rem 0.75rem;
+  }
+}
+
+.plain-input {
+  border: 1px solid $body-bg;
+  background-color: transparent;
+  display: inline;
+  &:hover {
+    border: 1px solid $hr-border-color;
+  }
+}
+
+.invoice-address {
+  .form-control.plain-input {
+    line-height: 1.0;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+}
+
+#invoice-id {
+  width: auto;
+}
+
+#invoice-logo-input {
+  display: none;
+}

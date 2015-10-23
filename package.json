@@ -1,0 +1,25 @@
+{
+  "name": "angular2-invoice",
+  "version": "1.0.0",
+  "description": "single page invoice application",
+  "main": "src/app.js",
+  "repository": "https://github.com/hendrikmaus/angular2-invocie",
+  "scripts": {
+    "tsc": "tsc -p src -w",
+    "sass": "node-sass src/css/app.scss src/css/app.css && node-sass -w src/css/app.scss src/css/app.css",
+    "start": "live-server --open=src"
+  },
+  "keywords": [],
+  "author": "Hendrik Maus <aidentailor@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha",
+    "systemjs": "^0.19.2"
+  },
+  "devDependencies": {
+    "live-server": "^0.8.1",
+    "node-sass": "^3.3.3",
+    "typescript": "^1.6.2"
+  }
+}

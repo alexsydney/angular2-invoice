@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goodrich</title>
+    <link href="css/app.css" rel="stylesheet">
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script>
+        System.config({
+            packages: { 'app': { defaultExtension: 'js' } }
+        });
+        System.import('app/app');
+    </script>
+</head>
+<body>
+    <div class="container">
+        <app>Loading ...</app>
+    </div>
+</body>
+</html>
