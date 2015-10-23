@@ -8,8 +8,11 @@ import {AddressModel} from './addressModel';
 @View({
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, AddressRenderer],
     template: `
-        <address-renderer [data]="addressModel"></address-renderer>
-        {{addressModel.name}}
+    <div class="row">
+        <div class="col-sm-6">
+            <address-renderer [data]="addressModel"></address-renderer>
+        </div>
+    </div>
     `
 })
 class App {
