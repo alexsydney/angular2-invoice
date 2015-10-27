@@ -7,6 +7,8 @@ import {InvoiceService} from './invoiceService';
 import {LogoService} from './logoService';
 import {LogoRenderer} from './logoRenderer';
 import {LogoModel} from './logoModel';
+import {SenderDetailsRenderer} from './senderDetailsRenderer';
+import {SenderDetailsModel} from './senderDetailsModel';
 
 @Component({
     selector: 'app',
@@ -16,10 +18,11 @@ import {LogoModel} from './logoModel';
         CORE_DIRECTIVES, FORM_DIRECTIVES,
         AddressRenderer,
         AddressInlineRenderer,
-        LogoRenderer
+        LogoRenderer,
+        SenderDetailsRenderer
     ],
     template: `
-        <div class="row">
+        <div class="row m-b-lg">
             <div class="col-sm-6 col-sm-offset-6">
                 <logo-renderer [model]="logo"></logo-renderer>
             </div>
@@ -34,7 +37,7 @@ import {LogoModel} from './logoModel';
                 <address-renderer [model]="recipient"></address-renderer>
             </div>
             <div class="col-sm-6">
-                Sender Details
+                <sender-details-renderer [address-model]="sender" [details-model]="senderDetails"></sender-details-renderer>
             </div>
         </div>
     `
@@ -43,6 +46,7 @@ class App {
     recipient : AddressModel;
     sender : AddressModel;
     senderInline : AddressInlineModel;
+    senderDetails : SenderDetailsModel;
     logo : LogoModel;
 
     constructor(
@@ -52,6 +56,7 @@ class App {
         this.recipient = invoiceService.getRecipient();
         this.sender = invoiceService.getSender();
         this.senderInline = invoiceService.getSenderInline();
+        this.senderDetails = invoiceService.getSenderDetails();
         this.logo = logoService.getLogo();
     }
 }

@@ -1,6 +1,7 @@
 import {InvoiceModel} from './invoiceModel';
 import {AddressModel} from './addressModel';
 import {AddressInlineModel} from './addressInlineModel';
+import {SenderDetailsModel} from './senderDetailsModel';
 
 export class InvoiceService {
     data : InvoiceModel = <InvoiceModel> {
@@ -21,6 +22,11 @@ export class InvoiceService {
         },
         senderInline: <AddressInlineModel> {
             content: 'Jane Doe, 1 Infinite Loop, Cupertino'
+        },
+        senderDetails: <SenderDetailsModel> {
+            phone: '7834 53 75 25 780',
+            uri: 'http://github.com/hendrikmaus',
+            email: 'aidentailor@gmail.com'
         }
     };
 
@@ -34,5 +40,9 @@ export class InvoiceService {
 
     getSenderInline() : AddressInlineModel {
         return this.data.senderInline;
+    }
+
+    getSenderDetails() : SenderDetailsModel {
+        return this.data.senderDetails;
     }
 }

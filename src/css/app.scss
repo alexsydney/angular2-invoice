@@ -13,7 +13,7 @@ $container-max-widths: (
 // todo can we pre-configure the print dialog from the app?
 @page {
   size: A4;
-  margin: 0.5in;
+  //margin: 0.5in;
 }
 
 .text-bold {
@@ -43,7 +43,8 @@ $container-max-widths: (
   }
 }
 
-.invoice-address {
+.invoice-address,
+.sender-details {
   .form-control.plain-input {
     line-height: 1.0;
     padding-top: 0.2rem;

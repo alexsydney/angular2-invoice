@@ -7,7 +7,7 @@ import {AddressInlineModel} from './addressInlineModel';
 @View({
     directives: [FORM_DIRECTIVES],
     template: `
-        <input type="text" class="form-control form-control-sm plain-input" [(ng-model)]="model.content">
+        <input type="text" class="form-control form-control-sm plain-input text-muted" [(ng-model)]="model.content">
     `
 })
 export class AddressInlineRenderer {
