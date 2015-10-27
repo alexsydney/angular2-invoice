@@ -12,7 +12,7 @@ import {InvoiceService} from './invoiceService';
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, AddressRenderer, AddressInlineRenderer],
     template: `
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <address-inline-renderer [model]="senderInline"></address-inline-renderer>
             </div>
         </div>

@@ -7,11 +7,13 @@ import {AddressModel} from './addressModel';
 @View({
     directives: [FORM_DIRECTIVES],
     template: `
-        <input type="text" class="form-control plain-input" [(ng-model)]="model.name">
-        <input type="text" class="form-control plain-input" [(ng-model)]="model.company">
-        <input type="text" class="form-control plain-input" [(ng-model)]="model.line1">
-        <input type="text" class="form-control plain-input" [(ng-model)]="model.line2">
-        <input type="text" class="form-control plain-input" [(ng-model)]="model.zip">
+        <div class="invoice-address">
+            <input type="text" class="form-control plain-input text-bold" [(ng-model)]="model.name">
+            <input type="text" class="form-control plain-input" [(ng-model)]="model.company">
+            <input type="text" class="form-control plain-input" [(ng-model)]="model.line1">
+            <input type="text" class="form-control plain-input" [(ng-model)]="model.line2">
+            <input type="text" class="form-control plain-input" [(ng-model)]="model.zip">
+        </div>
     `
 })
 export class AddressRenderer {

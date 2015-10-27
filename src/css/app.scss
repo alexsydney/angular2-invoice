@@ -20,10 +20,6 @@ body {
   margin: 0.5in;
 }
 
-textarea, input {
-  outline: none;
-}
-
 .text-bold {
   font-weight: bold;
 }
@@ -52,6 +48,8 @@ textarea, input {
 }
 
 .invoice-address {
+  padding: 0.3rem 0 0 0.6rem;
+
   .form-control.plain-input {
     line-height: 1.0;
     padding-top: 0.2rem;
