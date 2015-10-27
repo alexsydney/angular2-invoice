@@ -1,5 +1,6 @@
 import {InvoiceModel} from './invoiceModel';
 import {AddressModel} from './addressModel';
+import {AddressInlineModel} from './addressInlineModel';
 
 export class InvoiceService {
     data:InvoiceModel = <InvoiceModel> {
@@ -18,12 +19,8 @@ export class InvoiceService {
             line2: 'Cupertino, California, US',
             zip: '90210'
         },
-        senderInline: <AddressModel> {
-            name: 'Jane Doe',
-            company: '',
-            line1: '1 Infinite Loop',
-            line2: 'Cupertino, California, US',
-            zip: '90210'
+        senderInline: <AddressInlineModel> {
+            content: 'Jane Doe, 1 Infinite Loop, Cupertino'
         }
     };
 
@@ -35,7 +32,7 @@ export class InvoiceService {
         return this.data.sender;
     }
 
-    getSenderInline() : AddressModel {
+    getSenderInline() : AddressInlineModel {
         return this.data.senderInline;
     }
 }
