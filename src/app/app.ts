@@ -4,6 +4,7 @@ import {AddressInlineRenderer} from './addressInlineRenderer';
 import {AddressModel} from './addressModel';
 import {AddressInlineModel} from './addressInlineModel';
 import {InvoiceService} from './invoiceService';
+import {LogoService} from './logoService';
 import {LogoRenderer} from './logoRenderer';
 import {LogoModel} from './logoModel';
 
@@ -41,12 +42,15 @@ class App {
     senderInline:AddressInlineModel;
     logo:LogoModel;
 
-    constructor(public invoiceService:InvoiceService) {
+    constructor(
+        public invoiceService:InvoiceService,
+        public logoService:LogoService
+    ) {
         this.recipient = invoiceService.getRecipient();
         this.sender = invoiceService.getSender();
         this.senderInline = invoiceService.getSenderInline();
-        this.logo = new LogoModel();
+        this.logo = logoService.getLogo();
     }
 }
 
-bootstrap(App, [InvoiceService]);
+bootstrap(App, [InvoiceService, LogoService]);
