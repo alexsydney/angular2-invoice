@@ -24,7 +24,7 @@ import {LogoModel} from './logoModel';
                 <logo-renderer [model]="logo"></logo-renderer>
             </div>
         </div>
-        <div class="row">
+        <div class="row m-b">
             <div class="col-sm-6">
                 <address-inline-renderer [model]="senderInline"></address-inline-renderer>
             </div>
@@ -32,6 +32,9 @@ import {LogoModel} from './logoModel';
         <div class="row">
             <div class="col-sm-6">
                 <address-renderer [model]="recipient"></address-renderer>
+            </div>
+            <div class="col-sm-6">
+                Sender Details
             </div>
         </div>
     `
