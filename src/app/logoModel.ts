@@ -1,3 +1,3 @@
 export class LogoModel {
-    src:string;
+    src : string;
 }

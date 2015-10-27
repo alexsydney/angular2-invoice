@@ -37,14 +37,14 @@ import {LogoModel} from './logoModel';
     `
 })
 class App {
-    recipient:AddressModel;
-    sender:AddressModel;
-    senderInline:AddressInlineModel;
-    logo:LogoModel;
+    recipient : AddressModel;
+    sender : AddressModel;
+    senderInline : AddressInlineModel;
+    logo : LogoModel;
 
     constructor(
-        public invoiceService:InvoiceService,
-        public logoService:LogoService
+        public invoiceService : InvoiceService,
+        public logoService : LogoService
     ) {
         this.recipient = invoiceService.getRecipient();
         this.sender = invoiceService.getSender();

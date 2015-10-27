@@ -3,7 +3,7 @@ import {AddressModel} from './addressModel';
 import {AddressInlineModel} from './addressInlineModel';
 
 export class InvoiceService {
-    data:InvoiceModel = <InvoiceModel> {
+    data : InvoiceModel = <InvoiceModel> {
         id: 't3478',
         recipient: <AddressModel> {
             name: 'John Doe',

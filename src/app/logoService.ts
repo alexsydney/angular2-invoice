@@ -1,7 +1,7 @@
 import {LogoModel} from './logoModel';
 
 export class LogoService {
-    logo:LogoModel = <LogoModel> {
+    logo : LogoModel = <LogoModel> {
         src: 'http://placehold.it/350x80'
     };
 
