@@ -20,7 +20,7 @@ import {LogoModel} from './logoModel';
     ],
     template: `
         <div class="row">
-            <div class="col-sm-6 col-sm-offset-6 text-right">
+            <div class="col-sm-6 col-sm-offset-6">
                 <logo-renderer [model]="logo"></logo-renderer>
             </div>
         </div>
