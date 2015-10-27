@@ -10,10 +10,6 @@ $container-max-widths: (
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-body {
-  padding-top: 1rem;
-}
-
 // todo can we pre-configure the print dialog from the app?
 @page {
   size: A4;
