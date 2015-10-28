@@ -14,16 +14,15 @@ import {SenderDetailsModel} from './senderDetailsModel';
             <input type="text" class="form-control plain-input" [(ng-model)]="addressModel.line1">
             <input type="text" class="form-control plain-input" [(ng-model)]="addressModel.line2">
             <input type="text" class="form-control plain-input m-b" [(ng-model)]="addressModel.zip">
-
-            <div class="form-group row">
+            <div class="form-group row m-b-0">
                 <label for="phone" class="col-sm-2 form-control-label">Phone:</label>
                 <input type="text" id="phone" class="col-sm-10 form-control plain-input" [(ng-model)]="detailsModel.phone">
             </div>
-            <div class="form-group row">
+            <div class="form-group row m-b-0">
                 <label for="uri" class="col-sm-2 form-control-label">Web:</label>
                 <input type="text" id="uri" class="col-sm-10 form-control plain-input" [(ng-model)]="detailsModel.uri">
             </div>
-            <div class="form-group row">
+            <div class="form-group row m-b-0">
                 <label for="email" class="col-sm-2 form-control-label">Email:</label>
                 <input type="email" id="email" class="col-sm-10 form-control plain-input" [(ng-model)]="detailsModel.email">
             </div>

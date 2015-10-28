@@ -50,6 +50,10 @@ $container-max-widths: (
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
   }
+
+  .form-control-label {
+    padding: 0;
+  }
 }
 
 #invoice-id {
