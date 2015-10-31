@@ -3,6 +3,7 @@ import {AddressInlineModel} from './addressInlineModel';
 import {SenderDetailsModel} from './senderDetailsModel';
 import {InvoiceIdModel} from './invoiceIdModel';
 import {InvoiceItemModel} from './invoiceItemModel';
+import {PaymentNoticeModel} from './paymentNoticeModel';
 
 export class InvoiceModel {
     id : InvoiceIdModel;
@@ -11,4 +12,5 @@ export class InvoiceModel {
     senderInline : AddressInlineModel;
     senderDetails : SenderDetailsModel;
     items : InvoiceItemModel[];
+    paymentNotice : PaymentNoticeModel;
 }

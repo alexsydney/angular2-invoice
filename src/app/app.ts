@@ -13,6 +13,8 @@ import {InvoiceIdRenderer} from './invoiceIdRenderer';
 import {InvoiceIdModel} from './invoiceIdModel';
 import {InvoiceItemModel} from './invoiceItemModel';
 import {InvoiceDataRenderer} from './invoiceDataRenderer';
+import {PaymentNoticeRenderer} from './paymentNoticeRenderer';
+import {PaymentNoticeModel} from './paymentNoticeModel';
 
 @Component({
     selector: 'app',
@@ -25,7 +27,8 @@ import {InvoiceDataRenderer} from './invoiceDataRenderer';
         LogoRenderer,
         SenderDetailsRenderer,
         InvoiceIdRenderer,
-        InvoiceDataRenderer
+        InvoiceDataRenderer,
+        PaymentNoticeRenderer
     ],
     template: `
         <div class="row m-b-lg">
@@ -53,6 +56,15 @@ import {InvoiceDataRenderer} from './invoiceDataRenderer';
         <div class="row">
             <invoice-data-renderer class="col-sm-12" [items]="items"></invoice-data-renderer>
         </div>
+        <div class="row m-t-lg">
+            <payment-notice-renderer class="col-sm-12 p-l-0" [(notice)]="invoiceService.data.paymentNotice"></payment-notice-renderer>
+        </div>
+        <div class="row m-t-md">
+            <div class="col-sm-12"><p class="text-muted">[Bank Account]</p></div>
+        </div>
+        <footer class="row">
+            <div class="col-sm-12"><p class="text-muted">[Footer]</p></div>
+        </footer>
     `
 })
 class App {

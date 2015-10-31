@@ -4,6 +4,7 @@ import {AddressInlineModel} from './addressInlineModel';
 import {SenderDetailsModel} from './senderDetailsModel';
 import {InvoiceIdModel} from './invoiceIdModel';
 import {InvoiceItemModel} from './invoiceItemModel';
+import {PaymentNoticeModel} from './paymentNoticeModel';
 
 export class InvoiceService {
     data : InvoiceModel = <InvoiceModel> {
@@ -43,7 +44,10 @@ export class InvoiceService {
                 quantity: 13.5,
                 cost: 44.50
             }
-        ]
+        ],
+        paymentNotice: <PaymentNoticeModel> {
+            text: "The grand total is to be paid onto the below mentioned bank account until the 1st of Jan 2016."
+        }
     };
 
     getId() : InvoiceIdModel {
@@ -68,5 +72,9 @@ export class InvoiceService {
 
     getItems() : InvoiceItemModel[] {
         return this.data.items;
+    }
+
+    getPaymentNotice() : string {
+        return this.data.paymentNotice;
     }
 }
