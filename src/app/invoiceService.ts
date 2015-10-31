@@ -3,6 +3,7 @@ import {AddressModel} from './addressModel';
 import {AddressInlineModel} from './addressInlineModel';
 import {SenderDetailsModel} from './senderDetailsModel';
 import {InvoiceIdModel} from './invoiceIdModel';
+import {InvoiceItemModel} from './invoiceItemModel';
 
 export class InvoiceService {
     data : InvoiceModel = <InvoiceModel> {
@@ -30,7 +31,19 @@ export class InvoiceService {
             phone: '7834 53 75 25 780',
             uri: 'http://github.com/hendrikmaus',
             email: 'aidentailor@gmail.com'
-        }
+        },
+        items: [
+            <InvoiceItemModel> {
+                description: 'Project setup',
+                quantity: 1,
+                cost: 300.99
+            },
+            <InvoiceItemModel> {
+                description: 'Development',
+                quantity: 13.5,
+                cost: 44.50
+            }
+        ]
     };
 
     getId() : InvoiceIdModel {
@@ -51,5 +64,9 @@ export class InvoiceService {
 
     getSenderDetails() : SenderDetailsModel {
         return this.data.senderDetails;
+    }
+
+    getItems() : InvoiceItemModel[] {
+        return this.data.items;
     }
 }

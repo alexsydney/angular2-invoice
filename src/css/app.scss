@@ -20,22 +20,25 @@ $container-max-widths: (
   font-weight: bold;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
 .invoice-logo {
   padding: 0.375rem 1.35rem;
 }
 
 .invoice-items {
   .row:nth-child(even) {
-    background-color: #f9f9f9;
+    //background-color: #f9f9f9;
   }
 
   .column-total {
-    padding: 0.375rem 0.75rem;
   }
 }
 
 .plain-input {
-  border: 1px solid $body-bg;
+  border: 1px solid transparent;
   background-color: transparent;
   display: inline;
   &:hover {
@@ -43,25 +46,14 @@ $container-max-widths: (
   }
 }
 
-.invoice-address,
-.sender-details {
-  .form-control.plain-input {
-    line-height: 1.0;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-  }
-
-  .form-control-label {
-    padding: 0;
-  }
+.form-control.plain-input {
+  line-height: 1.0;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
-#invoice-id {
-  width: auto;
-}
-
-#invoice-logo-input {
-  display: none;
+.form-control-label {
+  padding: 0;
 }
 
 .form-group {

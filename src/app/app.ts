@@ -11,6 +11,8 @@ import {SenderDetailsRenderer} from './senderDetailsRenderer';
 import {SenderDetailsModel} from './senderDetailsModel';
 import {InvoiceIdRenderer} from './invoiceIdRenderer';
 import {InvoiceIdModel} from './invoiceIdModel';
+import {InvoiceItemModel} from './invoiceItemModel';
+import {InvoiceDataRenderer} from './invoiceDataRenderer';
 
 @Component({
     selector: 'app',
@@ -22,7 +24,8 @@ import {InvoiceIdModel} from './invoiceIdModel';
         AddressInlineRenderer,
         LogoRenderer,
         SenderDetailsRenderer,
-        InvoiceIdRenderer
+        InvoiceIdRenderer,
+        InvoiceDataRenderer
     ],
     template: `
         <div class="row m-b-lg">
@@ -31,15 +34,15 @@ import {InvoiceIdModel} from './invoiceIdModel';
             </div>
         </div>
         <div class="row m-b">
-            <div class="col-sm-6">
+            <div class="col-sm-6 p-l-0">
                 <address-inline-renderer [model]="senderInline"></address-inline-renderer>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 p-l-0">
                 <address-renderer [model]="recipient"></address-renderer>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 p-l-0">
                 <sender-details-renderer [address-model]="sender" [details-model]="senderDetails"></sender-details-renderer>
             </div>
         </div>
@@ -47,6 +50,9 @@ import {InvoiceIdModel} from './invoiceIdModel';
             <invoice-id-renderer class="m-t-lg" [invoice-id]="invoiceId"></invoice-id-renderer>
         </div>
         <hr>
+        <div class="row">
+            <invoice-data-renderer class="col-sm-12" [items]="items"></invoice-data-renderer>
+        </div>
     `
 })
 class App {
@@ -56,17 +62,20 @@ class App {
     senderDetails : SenderDetailsModel;
     logo : LogoModel;
     invoiceId : InvoiceIdModel;
+    items : InvoiceItemModel[];
 
     constructor(
         public invoiceService : InvoiceService,
         public logoService : LogoService
     ) {
+        this.logo = logoService.getLogo();
+
         this.recipient = invoiceService.getRecipient();
         this.sender = invoiceService.getSender();
         this.senderInline = invoiceService.getSenderInline();
         this.senderDetails = invoiceService.getSenderDetails();
         this.invoiceId = invoiceService.getId();
-        this.logo = logoService.getLogo();
+        this.items = invoiceService.getItems();
     }
 }
 
