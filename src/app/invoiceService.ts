@@ -2,10 +2,13 @@ import {InvoiceModel} from './invoiceModel';
 import {AddressModel} from './addressModel';
 import {AddressInlineModel} from './addressInlineModel';
 import {SenderDetailsModel} from './senderDetailsModel';
+import {InvoiceIdModel} from './invoiceIdModel';
 
 export class InvoiceService {
     data : InvoiceModel = <InvoiceModel> {
-        id: 't3478',
+        id: <InvoiceIdModel> {
+            id: 't3478'
+        },
         recipient: <AddressModel> {
             name: 'John Doe',
             company: 'J.D. Inc.',
@@ -29,6 +32,10 @@ export class InvoiceService {
             email: 'aidentailor@gmail.com'
         }
     };
+
+    getId() : InvoiceIdModel {
+        return this.data.id;
+    }
 
     getRecipient() : AddressModel {
         return this.data.recipient;

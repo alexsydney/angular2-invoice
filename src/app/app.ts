@@ -9,6 +9,8 @@ import {LogoRenderer} from './logoRenderer';
 import {LogoModel} from './logoModel';
 import {SenderDetailsRenderer} from './senderDetailsRenderer';
 import {SenderDetailsModel} from './senderDetailsModel';
+import {InvoiceIdRenderer} from './invoiceIdRenderer';
+import {InvoiceIdModel} from './invoiceIdModel';
 
 @Component({
     selector: 'app',
@@ -19,7 +21,8 @@ import {SenderDetailsModel} from './senderDetailsModel';
         AddressRenderer,
         AddressInlineRenderer,
         LogoRenderer,
-        SenderDetailsRenderer
+        SenderDetailsRenderer,
+        InvoiceIdRenderer
     ],
     template: `
         <div class="row m-b-lg">
@@ -40,6 +43,10 @@ import {SenderDetailsModel} from './senderDetailsModel';
                 <sender-details-renderer [address-model]="sender" [details-model]="senderDetails"></sender-details-renderer>
             </div>
         </div>
+        <div class="row">
+            <invoice-id-renderer class="m-t-lg" [invoice-id]="invoiceId"></invoice-id-renderer>
+        </div>
+        <hr>
     `
 })
 class App {
@@ -48,6 +55,7 @@ class App {
     senderInline : AddressInlineModel;
     senderDetails : SenderDetailsModel;
     logo : LogoModel;
+    invoiceId : InvoiceIdModel;
 
     constructor(
         public invoiceService : InvoiceService,
@@ -57,6 +65,7 @@ class App {
         this.sender = invoiceService.getSender();
         this.senderInline = invoiceService.getSenderInline();
         this.senderDetails = invoiceService.getSenderDetails();
+        this.invoiceId = invoiceService.getId();
         this.logo = logoService.getLogo();
     }
 }
