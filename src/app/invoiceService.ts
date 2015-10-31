@@ -74,7 +74,7 @@ export class InvoiceService {
         return this.data.items;
     }
 
-    getPaymentNotice() : string {
+    getPaymentNotice() : PaymentNoticeModel {
         return this.data.paymentNotice;
     }
 }
