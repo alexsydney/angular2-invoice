@@ -31,37 +31,52 @@ import {PaymentNoticeModel} from './paymentNoticeModel';
         PaymentNoticeRenderer
     ],
     template: `
+        <!-- Company Logo -->
         <div class="row m-b-lg">
             <div class="col-sm-6 col-sm-offset-6">
                 <logo-renderer [model]="logo"></logo-renderer>
             </div>
         </div>
-        <div class="row m-b">
+
+        <!-- Inline Sender Line for Address Display-->
+        <section class="row m-b">
             <div class="col-sm-6 p-l-0">
                 <address-inline-renderer [model]="senderInline"></address-inline-renderer>
             </div>
-        </div>
-        <div class="row">
+        </section>
+
+        <!-- Recipient for Address Display -->
+        <section class="row">
             <div class="col-sm-6 p-l-0">
                 <address-renderer [model]="recipient"></address-renderer>
             </div>
             <div class="col-sm-6 p-l-0">
                 <sender-details-renderer [address-model]="sender" [details-model]="senderDetails"></sender-details-renderer>
             </div>
-        </div>
-        <div class="row">
+        </section>
+
+        <!-- Invoice ID todo date is still missing-->
+        <section class="row">
             <invoice-id-renderer class="m-t-lg" [invoice-id]="invoiceId"></invoice-id-renderer>
-        </div>
+        </section>
         <hr>
-        <div class="row">
+
+        <!-- Invoice Data, i.e. Items in it-->
+        <section class="row">
             <invoice-data-renderer class="col-sm-12" [items]="items"></invoice-data-renderer>
-        </div>
-        <div class="row m-t-lg">
+        </section>
+
+        <!-- Payment Notice -->
+        <section class="row m-t-lg">
             <payment-notice-renderer class="col-sm-12 p-l-0" [(notice)]="invoiceService.data.paymentNotice"></payment-notice-renderer>
-        </div>
-        <div class="row m-t-md">
+        </section>
+
+        <!-- Bank Account Display -->
+        <section class="row m-t-md">
             <div class="col-sm-12"><p class="text-muted">[Bank Account]</p></div>
-        </div>
+        </section>
+
+        <!-- Footer -->
         <footer class="row">
             <div class="col-sm-12"><p class="text-muted">[Footer]</p></div>
         </footer>
