@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "single page invoice application",
   "main": "src/app.js",
-  "repository": "https://github.com/hendrikmaus/angular2-invocie",
+  "repository": "https://github.com/hendrikmaus/angular2-invoice",
   "scripts": {
     "tsc": "tsc -p src -w",
     "sass": "node-sass src/css/app.scss src/css/app.css && node-sass -w src/css/app.scss src/css/app.css",
@@ -13,7 +13,7 @@
   "author": "Hendrik Maus <aidentailor@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "angular2": "2.0.0-alpha.44",
+    "angular2": "2.0.0-alpha.45",
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha",
     "systemjs": "^0.19.2"
   },
