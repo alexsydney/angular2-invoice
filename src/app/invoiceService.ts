@@ -33,7 +33,7 @@ export class InvoiceService {
             uri: 'http://github.com/hendrikmaus',
             email: 'aidentailor@gmail.com'
         },
-        items: [
+        items: <InvoiceItemModel[]> [
             <InvoiceItemModel> {
                 description: 'Project setup',
                 quantity: 1,
@@ -49,32 +49,4 @@ export class InvoiceService {
             text: "The grand total is to be paid onto the below mentioned bank account until the 1st of Jan 2016."
         }
     };
-
-    getId() : InvoiceIdModel {
-        return this.data.id;
-    }
-
-    getRecipient() : AddressModel {
-        return this.data.recipient;
-    }
-
-    getSender() : AddressModel {
-        return this.data.sender;
-    }
-
-    getSenderInline() : AddressInlineModel {
-        return this.data.senderInline;
-    }
-
-    getSenderDetails() : SenderDetailsModel {
-        return this.data.senderDetails;
-    }
-
-    getItems() : InvoiceItemModel[] {
-        return this.data.items;
-    }
-
-    getPaymentNotice() : PaymentNoticeModel {
-        return this.data.paymentNotice;
-    }
 }

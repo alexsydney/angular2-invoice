@@ -6,7 +6,7 @@ import {LogoModel} from './logoModel';
 })
 @View({
     template: `
-        <img src="{{model.src}}" width="350" alt="Logo">
+        <img src="{{ model.src }}" width="350" alt="Logo">
     `
 })
 export class LogoRenderer {
