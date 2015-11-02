@@ -76,11 +76,6 @@ import {BankAccountRenderer} from "./bankAccountRenderer";
         <section class="row m-t-md">
             <bank-account-renderer [model]="invoice.bankAccount"></bank-account-renderer>
         </section>
-
-        <!-- Footer -->
-        <footer class="row">
-            <div class="col-sm-12"><p class="text-muted">[Footer]</p></div>
-        </footer>
     `
 })
 class App {
