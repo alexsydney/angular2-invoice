@@ -1,14 +1,26 @@
 $enable-flex: true;
 
-// Container is always 50rem in this project
-$container-max-widths: (
-        sm: 50rem, // 800
-        md: 50rem, // 800
-        lg: 50rem, // 800
-        xl: 50rem // 800
+/* Deactivate responsive grid */
+$grid-breakpoints: (
+  // Extra small screen / phone
+        xs: 0,
+  // Small screen / phone
+        sm: 0em,
+  // Medium screen / tablet
+        md: 0em,
+  // Large screen / desktop
+        lg: 0em,
+  // Extra large screen / wide desktop
+        xl: 0em
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* Deactivate responsive grid */
+.container {
+  width: 800px;
+  max-width: none !important;
+}
 
 // todo can we pre-configure the print dialog from the app?
 @page {
