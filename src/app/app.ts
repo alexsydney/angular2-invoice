@@ -13,6 +13,7 @@ import {SenderDetailsRenderer} from './senderDetailsRenderer';
 import {InvoiceIdRenderer} from './invoiceIdRenderer';
 import {InvoiceDataRenderer} from './invoiceDataRenderer';
 import {PaymentNoticeRenderer} from './paymentNoticeRenderer';
+import {BankAccountRenderer} from "./bankAccountRenderer";
 
 @Component({
     selector: 'app',
@@ -27,7 +28,8 @@ import {PaymentNoticeRenderer} from './paymentNoticeRenderer';
         SenderDetailsRenderer,
         InvoiceIdRenderer,
         InvoiceDataRenderer,
-        PaymentNoticeRenderer
+        PaymentNoticeRenderer,
+        BankAccountRenderer
     ],
     template: `
         <!-- Company Logo -->
@@ -72,7 +74,7 @@ import {PaymentNoticeRenderer} from './paymentNoticeRenderer';
 
         <!-- Bank Account Display -->
         <section class="row m-t-md">
-            <div class="col-sm-12"><p class="text-muted">[Bank Account]</p></div>
+            <bank-account-renderer [model]="invoice.bankAccount"></bank-account-renderer>
         </section>
 
         <!-- Footer -->

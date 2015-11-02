@@ -5,6 +5,7 @@ import {SenderDetailsModel} from './senderDetailsModel';
 import {InvoiceIdModel} from './invoiceIdModel';
 import {InvoiceItemModel} from './invoiceItemModel';
 import {PaymentNoticeModel} from './paymentNoticeModel';
+import {BankAccountModel} from "./bankAccountModel";
 
 export class InvoiceService {
     data : InvoiceModel = <InvoiceModel> {
@@ -47,6 +48,12 @@ export class InvoiceService {
         ],
         paymentNotice: <PaymentNoticeModel> {
             text: "The grand total is to be paid onto the below mentioned bank account until the 1st of Jan 2016."
+        },
+        bankAccount: <BankAccountModel> {
+            recipient: "Hendrik Maus",
+            institute : "Bank of Awesome",
+            bic : "BUFTOBJKB",
+            iban : "DE532975238507"
         }
     };
 }
