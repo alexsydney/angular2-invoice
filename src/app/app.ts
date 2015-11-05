@@ -77,7 +77,7 @@ import {BankAccountRenderer} from "./bankAccountRenderer";
 
         <!-- Bank Account Display -->
         <section class="row m-t-md">
-            <bank-account-renderer [model]="invoice.bankAccount"></bank-account-renderer>
+            <bank-account-renderer class="col-sm-6 p-l-0" [model]="invoice.bankAccount"></bank-account-renderer>
         </section>
     `
 })
