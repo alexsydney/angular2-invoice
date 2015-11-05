@@ -32,7 +32,8 @@ export class InvoiceService {
         senderDetails: <SenderDetailsModel> {
             phone: '7834 53 75 25 780',
             uri: 'http://github.com/hendrikmaus',
-            email: 'aidentailor@gmail.com'
+            email: 'aidentailor@gmail.com',
+            vatid: '432678/47893/4637'
         },
         items: <InvoiceItemModel[]> [
             <InvoiceItemModel> {

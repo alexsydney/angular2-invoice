@@ -26,6 +26,10 @@ import {SenderDetailsModel} from './senderDetailsModel';
                 <label for="email" class="col-sm-2 form-control-label">Email:</label>
                 <input type="email" id="email" class="col-sm-10 form-control plain-input" [(ng-model)]="detailsModel.email">
             </div>
+            <div class="form-group row m-b-0">
+                <label for="vat" class="col-sm-2 form-control-label">VAT:</label>
+                <input type="text" id="vat" class="col-sm-10 form-control plain-input" [(ng-model)]="detailsModel.vatid">
+            </div>
         </div>
     `
 })
