@@ -12,6 +12,7 @@ export class InvoiceService {
         id: <InvoiceIdModel> {
             id: 't3478'
         },
+        date: new Date(),
         recipient: <AddressModel> {
             name: 'John Doe',
             company: 'J.D. Inc.',

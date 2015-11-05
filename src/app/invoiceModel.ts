@@ -8,6 +8,7 @@ import {BankAccountModel} from './bankAccountModel';
 
 export class InvoiceModel {
     id : InvoiceIdModel;
+    date : Date;
     recipient : AddressModel;
     sender : AddressModel;
     senderInline : AddressInlineModel;

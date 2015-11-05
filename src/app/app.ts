@@ -56,9 +56,12 @@ import {BankAccountRenderer} from "./bankAccountRenderer";
             </div>
         </section>
 
-        <!-- Invoice ID todo date is still missing-->
-        <section class="row">
-            <invoice-id-renderer class="m-t-lg" [invoice-id]="invoice.id"></invoice-id-renderer>
+        <!-- Invoice ID & Date-->
+        <section class="row m-t-lg">
+            <invoice-id-renderer class="col-sm-6 p-l-0" [invoice-id]="invoice.id"></invoice-id-renderer>
+
+            <!-- todo (datepicker) Always display today's date for now; also format is bound to the client system -->
+            <p class="col-sm-6">{{ invoice.date.toDateString() }}</p>
         </section>
         <hr>
 
