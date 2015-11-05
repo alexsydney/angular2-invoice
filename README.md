@@ -11,3 +11,7 @@ $ npm start
 ```
 
 Inspired by https://github.com/metaware/angular-invoicing
+
+## Todo / Improvements
+
+* [ ] Include a lib to turn numbers like 12.4328745 into 12.43 (maybe http://openexchangerates.github.io/accounting.js/)
