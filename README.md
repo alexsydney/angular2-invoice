@@ -4,6 +4,8 @@
 
 ```bash
 $ npm install
+$ npm install -g node-sass
+$ which node-sass
 # keep these open
 $ npm run tsc
 $ npm run sass

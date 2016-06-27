@@ -1,10 +1,9 @@
-import {Component, View, Input, FORM_DIRECTIVES, NgFor} from 'angular2/angular2';
+import {Component, Input} from 'angular2/core';
+import {FORM_DIRECTIVES, NgFor} from 'angular2/common';
 import {InvoiceItemModel} from './invoiceItemModel';
 
 @Component({
-    selector: 'invoice-data-renderer'
-})
-@View({
+    selector: 'invoice-data-renderer',
     directives: [FORM_DIRECTIVES, NgFor],
     template: `
         <div class="row">
@@ -15,15 +14,15 @@ import {InvoiceItemModel} from './invoiceItemModel';
         </div>
         <hr>
         <div class="invoice-items">
-            <div class="row" *ng-for="#item of items">
+            <div class="row" *ngFor="let item of items">
                 <div class="col-sm-6 p-l-0">
-                    <input type="text" class="form-control plain-input" [(ng-model)]="item.description">
+                    <input type="text" class="form-control plain-input" [(ngModel)]="item.description">
                 </div>
                 <div class="col-sm-2 p-l-0">
-                    <input type="text" class="form-control plain-input" [(ng-model)]="item.quantity">
+                    <input type="text" class="form-control plain-input" [(ngModel)]="item.quantity">
                 </div>
                 <div class="col-sm-2 p-l-0">
-                    <input type="text" class="form-control plain-input" [(ng-model)]="item.cost">
+                    <input type="text" class="form-control plain-input" [(ngModel)]="item.cost">
                 </div>
                 <div class="col-sm-2 column-total">
                     {{item.quantity * item.cost}}
@@ -39,7 +38,7 @@ import {InvoiceItemModel} from './invoiceItemModel';
             <div class="row">
                 <div class="col-sm-2 col-sm-offset-6 text-right text-italic">Tax %</div>
                 <div class="col-sm-2 p-l-0 text-italic">
-                    <input type="number" class="form-control plain-input" [(ng-model)]="tax">
+                    <input type="number" class="form-control plain-input" [(ngModel)]="tax">
                 </div>
                 <div class="col-sm-2 text-italic">{{getTax()}}</div>
             </div>

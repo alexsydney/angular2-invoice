@@ -1,14 +1,11 @@
-import {Component, View, Input} from 'angular2/angular2';
+import {Component, Input} from 'angular2/core';
 import {LogoModel} from './logoModel';
 
 @Component({
-    selector: 'logo-renderer'
-})
-@View({
+    selector: 'logo-renderer',
     template: `
         <img src="{{ model.src }}" width="350" alt="Logo">
-    `
+    `,
+    inputs: ['model']
 })
-export class LogoRenderer {
-    @Input() model : LogoModel;
-}
+export class LogoRenderer {}

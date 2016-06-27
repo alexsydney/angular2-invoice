@@ -6,20 +6,26 @@
   "repository": "https://github.com/hendrikmaus/angular2-invoice",
   "scripts": {
     "tsc": "tsc -p src -w",
-    "sass": "node-sass src/css/app.scss src/css/app.css && node-sass -w src/css/app.scss src/css/app.css",
+    "sass": "node-sass src/css/app.scss && node-sass -w src/css/app.scss src/css/app.css",
     "start": "live-server --open=src"
   },
   "keywords": [],
   "author": "Hendrik Maus <aidentailor@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "angular2": "2.0.0-alpha.45",
-    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha",
-    "systemjs": "^0.19.2"
+    "angular2": "2.0.0-beta.17",
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.2",
+    "minimatch": "3.0.2",
+    "systemjs": "0.19.29"
   },
   "devDependencies": {
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.35.1",
     "live-server": "^0.8.1",
-    "node-sass": "^3.3.3",
+    "node-sass": "^3.8.0",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.9",
+    "zone.js": "^0.6.12",
     "typescript": "^1.6.2"
   }
 }

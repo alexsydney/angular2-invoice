@@ -1,4 +1,6 @@
-import {Component, View, CORE_DIRECTIVES, bootstrap, FORM_DIRECTIVES, NgFor} from 'angular2/angular2';
+import {bootstrap} from 'angular2/platform/browser';
+import {Component} from 'angular2/core';
+import {CORE_DIRECTIVES, FORM_DIRECTIVES, NgFor} from 'angular2/common';
 
 import {InvoiceService} from './invoiceService';
 import {LogoService} from './logoService';
@@ -17,8 +19,6 @@ import {BankAccountRenderer} from "./bankAccountRenderer";
 
 @Component({
     selector: 'app',
-})
-@View({
     directives: [
         CORE_DIRECTIVES,
         FORM_DIRECTIVES,
